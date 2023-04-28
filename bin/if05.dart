@@ -6,25 +6,28 @@ Args:
 Returns:
     int: return answer.
 */
-int func(int a,int b,int c,int d){
-    int answer=0;
-    if(a > b && a > c && a > d){
-        return answer+a;
-    }else{
-        if(b > c && b > d && b > a){
-            return answer + b;
-        }else{
-            if(c > b && c > d && c > a){
-                return answer + c;
-            }else{
-                if(d > b && d > c && d > a){
-                    return answer +d;
-                }
-            }
-        }
+
+
+int func(int s) {
+    int x1 = s % 10;
+    int x2 = s % 100 ~/ 10;
+    int x3 = s % 1000 ~/ 100;
+    int x4 = s ~/ 1000;
+    
+    if (x1 > x2 && x1 > x3 && x1 > x4){
+        return (x1);
     }
-    return answer;
+        if (x2 > x3 && x2 > x4 && x2 > x1){
+            return (x2);
+        }
+            if (x3 > x4 && x3 > x2 && x3 > x1){
+                return (x3);
+            }
+                if (x4 > x1 && x4 > x2 && x4 > x3){
+                    return (x4);
+                }
+    return 0;
 }
-void main() {
-    print(func(12,434,232,3233));
+void main(){
+    print(func(7845));
 }
