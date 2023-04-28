@@ -8,5 +8,17 @@ Returns:
     int: return answer. 
 */
 
-void main() {
-}
+int func( int a, int b) { 
+    int answer = 0; 
+if ( a == b) { 
+    return answer;
+ } 
+if ( a > b) { 
+    return a; 
+}else{ 
+    return b;
+ }
+} 
+void main() { 
+    print(func(6,7));
+ }
